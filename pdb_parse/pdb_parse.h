@@ -10,6 +10,7 @@
 #define pdb_parse_h
 
 #include <stdio.h>
+#include <stdlib.h>
 
 typedef struct Atom{
     int ID;
@@ -43,4 +44,6 @@ typedef struct Protein{
     int num_chains;
 } Protein;
 
+Protein* new_protein(char* file_name);
+void free_protein(Protein* p);
 #endif /* pdb_parse_h */
