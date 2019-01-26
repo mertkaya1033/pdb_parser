@@ -47,7 +47,7 @@ Protein* new_protein(char *file_name){
             newP->atoms[newP->num_atoms].coor[2] = atof(sstring);
             free(sstring);
             
-            //TODO initialize residues and chains
+            //TODO initialize residues and chains ehe
         }
     }
     
