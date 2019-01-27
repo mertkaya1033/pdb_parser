@@ -17,7 +17,7 @@ typedef struct Atom{
     int ID;
     char name[5];
     double coor[3];
-    struct Residue* res;
+    struct Residue* residue;
 } Atom;
 
 typedef struct Residue{
@@ -25,7 +25,7 @@ typedef struct Residue{
     char name[4];
     Atom* atoms;
     int num_atoms;
-    struct Chain* chains;
+    struct Chain* chain;
 } Residue;
 
 typedef struct Chain{

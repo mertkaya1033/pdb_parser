@@ -7,8 +7,13 @@
 //
 
 #include <stdio.h>
+#include "pdb_parse.h"
 
 int main(int argc, const char * argv[]) {
-    printf("Hello, World!\n");
+    Protein* protein = new_protein("/Users/mert/Desktop/programs/C_Programs/pdb_parse/3nir.pdb");
+    printf("Number of atoms: %d\n", protein->num_atoms);
+    printf("Number of residues: %d\n", protein->num_residues);
+    printf("Number of chains: %d\n", protein->num_chains);
+    free_protein(protein);
     return 0;
 }
