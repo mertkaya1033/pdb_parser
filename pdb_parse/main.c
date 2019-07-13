@@ -10,10 +10,10 @@
 #include "pdb_parse.h"
 
 int main(int argc, const char * argv[]) {
-    Protein* protein = new_protein("/Users/mert/Desktop/programs/C_Programs/pdb_parse/3nir.pdb");
-    printf("Number of atoms: %d\n", protein->num_atoms);
-    printf("Number of residues: %d\n", protein->num_residues);
-    printf("Number of chains: %d\n", protein->num_chains);
+    Protein* protein = new_protein("/Users/mert/Desktop/programs/C/pdb_parser/3nir.pdb");
+    
+    contacts(protein, 2, 3);
+    
     free_protein(protein);
     return 0;
 }

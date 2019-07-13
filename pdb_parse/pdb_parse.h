@@ -12,6 +12,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <math.h>
 
 typedef struct Atom{
     int ID;
@@ -47,4 +48,12 @@ typedef struct Protein{
 
 Protein* new_protein(char* file_name);
 void free_protein(Protein* p);
+Atom* getAtom(Protein *protein, char chainID, int residueID, char *atomName);
+Residue* getResidue(Protein *protein, char chainID, int residueID);
+Chain* getChain(Protein* protein, char chainID);
+double dist(double *a, double *b);
+double distAtom(Atom *a, Atom *b);
+double distResidue(Residue *a, Residue *b);
+double distResidueCA(Residue *a, Residue *b);
+void contacts(Protein *protein, double maxDist, int criteria);
 #endif /* pdb_parse_h */
